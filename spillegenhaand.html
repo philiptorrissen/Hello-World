@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="task">
+        <h2>Oppgave 6</h2>
+        <p>Samme som i oppgaven over, men Input-feltet skal ha en placeholder-tekst. For å vinne trengs ikke en eksakt match, bare at teksten brukeren skriver inneholder det magiske ordet. Teksten brukeren skriver kan godt være i feil casing (upper/lower).</p>
+        <input type="text" id="inputField" placeholder="Skriv noe...">
+        <div>
+          <p id="text"></p>
+        </div>
+        <script>
+          const inputField = document.getElementById('inputField');
+          const outputText = document.getElementById('text');
+      
+          // Definer det magiske ordet (i dette tilfellet "magi")
+          const magicWord = "magi";
+      
+          inputField.addEventListener('input', () => {
+            const inputValue = inputField.value;
+            const reversedValue = inputValue.split('').reverse().join('');
+            outputText.textContent = reversedValue;
+      
+            // Sjekk om den speilvendte teksten inneholder det magiske ordet (uavhengig av casing)
+            if (reversedValue.toLowerCase().includes(magicWord)) {
+              outputText.style.backgroundColor = 'green';
+            } else {
+              outputText.style.backgroundColor = 'white';
+            }
+          });
+        </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <form action="/submit.html" method="post">
+        <div>
+            <h2>Oppgave 1</h2>
+            <label for="navn">Navnet ditt:</label>
+            <input id="navn" type="text"></input>
+            <p>Dette fungerer ved å lage en label for inputten, hvor man forklarer brukeren at man skal bruke tekstboksen til å skrive inn navnet sitt.</p>
+            <p>Input uten en spesifisert "type" er bare en standard tekstboks.</p>
+        </div>
+        <div>
+            <h2>Oppgave 2</h2>
+            <p><label for="stortext">Her kan du skrive en bio: </label></p>
+            <textarea id="stortext" rows="6" cols="60"></textarea>
+            <p>Dette fungerer ved å lage en label, hvor vi forklarer brukeren at man skal bruke text inputten til å skrive en bio</p>
+            <p>For å kunne lage en stor tekstboks bruker man taggen "textarea"</p>
+        </div>
+        <div>
+            <h2>Oppgave 3</h2>
+            <div>
+                <p><label for="alder">Her kan du skrive alderen din: </label></p>
+                <input type="range" min="12" max="100" value="18" id="alder" name="alder">
+                <p>Alder: <span id="slider"></span></p> 
+            </div>
+            <p>Dette funker ved å gi input typen "range" og bruke JavaScript til å vise verdien slik at brukeren vet hvilken alder som er valgt.</p>
+        </div>
+        <div>
+            <h2>Oppgave 4</h2>
+            <p><label for="dato">Her kan du velge måneden du er født i : </label></p>
+            <input type="month" id="dato" name="fodselmaned">
+            <p>Måned: <span id="dateout"></span></p>
+        </div>
+        <div>
+            <h2>Oppgave 5</h2> 
+            <input type="checkbox" id="taco1" name="ingredient" value="kjott">
+            <label for="taco1"> 🥩 Kjøtt</label><br>
+
+            <input type="checkbox" id="taco2" name="ingredient" value="mais">
+            <label for="taco2"> 🌽 Mais</label><br>
+
+            <input type="checkbox" id="taco3" name="ingredient" value="guacamole">
+            <label for="taco3"> 🥑 Guacamole</label><br>
+
+            <input type="checkbox" id="taco4" name="ingredient" value="ost">
+            <label for="taco4"> 🧀 Ost</label><br>
+
+            <input type="checkbox" id="taco5" name="ingredient" value="salsa">
+            <label for="taco5"> 🍅 Salsa</label><br>
+
+            <input type="checkbox" id="taco6" name="ingredient" value="lok">
+            <label for="taco6"> 🧅 Løk</label><br>
+
+            <input type="checkbox" id="taco7" name="ingredient" value="tomat">
+            <label for="taco7"> 🍅 Tomat</label><br>
+
+            <input type="checkbox" id="taco8" name="ingredient" value="romme">
+            <label for="taco8"> 🥛 Rømme</label><br>
+            <p>Dette funker ved å bruke input "type checkbox"</p>
+        </div>
+        
+        <!-- Oppgave 6-11 -->
+
+        <button type="submit">Send inn</button>
+    </form>
+
+    <script>
+        let slider = document.getElementById("alder");
+        let output = document.getElementById("slider");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+
+        let year = new Date().getFullYear();
+        document.getElementById('dato').setAttribute("min", year + "-01");
+        document.getElementById('dato').setAttribute("max", year + "-12");
+
+        let dato = document.getElementById("dato");
+        let outputdate = document.getElementById("dateout");
+        outputdate.innerHTML = dato.value;
+
+        dato.oninput = function() {
+            outputdate.innerHTML = this.value;
+        }
+    </script>
+</body>
+</html>

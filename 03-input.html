@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .oppgave {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    
+        h2 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+    
+        label {
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        textarea,
+        input[type="range"],
+        input[type="month"],
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 1rem;
+        }
+    
+        input[type="range"] {
+            width: auto;
+        }
+    
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    
+        input[type="submit"] {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    
+        p {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="oppgave">
+            <h2>Oppgave 1</h2>
+            <label for="navn">Navnet ditt:</label>
+            <input id="navn" type="text" onfocus="myFunction(this)"></input>
+            <p>Dette fungerer ved å lage en label for inputten, hvor man forklarer brukeren at man skal bruke tekstboksen til å skrive inn navnet sitt.</p>
+            <p>Input uten en spesifisert "type" er bare en standard tekstboks.</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 2</h2>
+            <p><label for="stortext">Her kan du skrive en bio: </label></p>
+            <textarea id="stortext" rows="6" cols="60"></textarea>
+            <p>Dette fungerer ved å lage en label, hvor vi forklarer brukeren at man skal bruke text inputten til å skrive en bio</p>
+            <p>For å kunne lage en stor tekstboks bruker man taggen "textarea"</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 3</h2>
+            <div>
+                <p><label for="alder">Her kan du skrive alderen din: </label></p>
+                <input type="range" min="12" max="100" value="18" id="alder">
+                <p>Alder: <span id="slider"></span></p> 
+            </div>
+            <p>Dette funker ved å gi input typen "range" Også bruke javascript til å å plotte verdien slik at brukeren vet hvilken alder som skrives inn.</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 4</h2>
+            <p><label for="dato">Her kan du velge måneden du er født i : </label></p>
+            <input type="month" id="dato">
+            <p>Måned: <span id="dateout"></span></p>
+            <p></p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 5</h2> 
+            <input type="checkbox" id="taco1" name="ingredient" value="kjott">
+            <label for="taco1"> 🥩 Kjøtt</label><br>
+
+            <input type="checkbox" id="taco2" name="ingredient" value="mais">
+            <label for="taco2"> 🌽 Mais</label><br>
+
+            <input type="checkbox" id="taco3" name="ingredient" value="guacamole">
+            <label for="taco3"> 🥑 Guacamole</label><br>
+
+            <input type="checkbox" id="taco4" name="ingredient" value="ost">
+            <label for="taco4"> 🧀 Ost</label><br>
+
+            <input type="checkbox" id="taco5" name="ingredient" value="salsa">
+            <label for="taco5"> 🍅 Salsa</label><br>
+
+            <input type="checkbox" id="taco6" name="ingredient" value="lok">
+            <label for="taco6"> 🧅 Løk</label><br>
+
+            <input type="checkbox" id="taco7" name="ingredient" value="tomat">
+            <label for="taco7"> 🍅 Tomat</label><br>
+
+            <input type="checkbox" id="taco8" name="ingredient" value="romme">
+            <label for="taco8"> 🥛 Rømme</label><br>
+
+            <p>Dette funker ved å bruke input "type checkbox"</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 6</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 7</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 8</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 9</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 10</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <div class="oppgave">
+            <h2>Oppgave 11</h2>
+            <!-- din løsning på oppgave 1 -->
+            <p>[Din forklaring på hvordan dette funker]</p>
+        </div>
+        <!-- Legg til flere oppgaver her om nødvendig -->
+        <input type="submit" value="Send inn">
+    </form>
+</body>
+</html>
+
+
+<script>
+    let slider = document.getElementById("alder");
+    let output = document.getElementById("slider");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    let year = new Date().getFullYear();
+    document.getElementById('date').setAttribute("min", year + "-01-01");
+    document.getElementById('date').setAttribute("max", year + "-12-31");
+    
+    let dato = document.getElementById("dato");
+    let outputdate = document.getElementById("dateout");
+    outputdate.innerHTML = dato.value;
+    
+    dato.oninput = function() {
+      outputdate.innerHTML = this.value;
+    }
+
+    function myFunction(x) {
+        x.style.background = "blue";
+    }
+</script>

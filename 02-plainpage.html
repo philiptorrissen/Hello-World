@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    /* Reset default margin and padding for all elements */
+    body, h1, h2, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set a background color and text color for the entire page */
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header */
+    #main h1 {
+      text-align: center;
+      padding: 20px;
+      font-family: 'Helvetica', sans-serif; /* Apply a font */
+      font-size: 36px; /* Adjust font size */
+      color: #007bff; /* Change font color */
+    }
+
+    /* Style the menu */
+    #menu {
+      background-color: #333;
+    }
+
+    #menu_list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    #menu_list li {
+      margin: 0 10px;
+    }
+
+    #menu_list a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+    }
+
+    /* Hover effect */
+    #menu_list a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Style the banner */
+    #banner {
+      background-color: #007bff;
+      text-align: center;
+      padding: 20px 0;
+      color: #fff;
+      opacity: 1; /* Initial opacity */
+      transition: opacity 0.5s; /* Apply the transition effect */
+    }
+
+    /* Hover effect */
+    #banner:hover {
+      opacity: 0.8; /* Adjust opacity on hover */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Style the content */
+    #content {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
+  <title>ufisk.no</title>
+</head>
+<body>
+  <div id="main">
+    <h1>ufisk.no</h1>
+    <div id="menu">
+      <ul id="menu_list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div id="banner">
+      <h1 style="color: #fff;">Welcome to ufisk.no</h1>
+    </div>
+    <div id="content">
+      <h2>Home</h2>
+      <p>Home of ufisk on the Internet. ATM, ufisk is working on <a href="superapp.html">an insanely super app</a></p>
+    </div>
+  </div>
+</body>
+</html>

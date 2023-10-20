@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikarevyen</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #header h1 {
+            color: #000;
+            font-size: 36px;
+            font-weight: bold;
+            transition: color 0.3s, font-size 0.3s; /* Legg til overgangseffekten */
+        }
+
+        #header h1:hover {
+            color: rgb(101, 194, 223);
+            font-size: 40px; /* Endre størrelsen når du svever over */
+        }
+
+        #menu {
+            display: inline-block;
+        }
+
+        #menu a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s, font-size 0.3s; /* Legg til font-size-overgang */
+        }
+
+        #menu a:hover {
+            color: rgb(101, 194, 223);
+            font-size: 24px; /* Endre størrelsen når du svever over */
+        }
+
+        @media (max-width: 768px) {
+            #menu {
+                display: block;
+            }
+
+            #menu a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        #contact-info {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #contact-info p {
+            color: #888;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #instagram-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #instagram-section p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        #instagram-link {
+            display: inline-block;
+        }
+
+        #instagram-link img {
+            width: 300px; /* Tilpass bildestørrelsen etter behov */
+            border: 2px solid #000;
+            transition: transform 0.3s;
+        }
+
+        #instagram-link img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html" style="text-decoration: none;"><h1>Vikarevyen</h1></a>
+        <div id="menu">
+            <a href="#">Om Oss</a>
+            <a href="#">Spons</a>
+            <a href="gruppesjefer.html">Gruppesjefer</a>
+            <a href="kontakt.html">Kontakt oss</a>
+        </div>
+    </div>
+
+    <div id="instagram-section">
+        <p>Sjekk oss ut på Instagram:</p>
+        <a id="instagram-link" href="https://www.instagram.com/p/CxGS2wgNSwR/" target="_blank">
+            <img src="instabilde1.png" alt="Instagram-bilde">
+        </a>
+    </div>
+
+    <div id="contact-info">
+        <p>Adresse: Cort Adelers gate 30, 0254 Oslo</p>
+    </div>
+</body>
+<script>
+    console.log("Christina er clapped")
+</script>
+</html>

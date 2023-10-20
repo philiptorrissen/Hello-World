@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06 - JavaScript basics del 2</title>
+    <style>
+      .task {
+        margin: 10px;
+        padding: 10px;
+        background-color: antiquewhite;
+        border: 2px solid gray;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>06 - JavaScript basics del 2</h1>
+
+    <div class="task">
+      <h2>Oppgave 1</h2>
+      <p>[Forklar hva som foregår her]</p>
+      <script>
+          function sayHelloToInspector() {
+            console.log("Hello inspector");
+
+        }
+
+
+
+        sayHelloToInspector();
+
+          
+      </script>
+      <pre></pre>
+    </div>
+
+
+    <h1>06 - JavaScript basics del 2</h1>
+
+    <div class="task">
+      <h2>Oppgave 2</h2>
+      <p>[Forklar hva som foregår her]</p>
+      <script>
+
+        const secretMessag = "magic"
+          function secretmessage(secretMessag) {
+            console.log("The secret is: ", secretMessag);
+
+        }
+
+
+
+        secretmessage();
+
+          
+      </script>
+      <pre></pre>
+    </div>
+
+    <!-- oppgave 2 osv -->
+
+    <script>
+      const divs = document.querySelectorAll('div.task')
+      divs.forEach((div) => {
+        const sourceScript = div.querySelector('script')
+        const targetPre = div.querySelector('pre')
+        targetPre.textContent = sourceScript.textContent
+      })
+    </script>
+  </body>
+</html>

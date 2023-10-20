@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 - JavaScript basics</title>
+  <style>
+    .task {
+      margin: 10px;
+      padding: 10px;
+      background-color: antiquewhite;
+      border: 2px solid gray;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>05 - JavaScript basics</h1>
+
+  <div class="task">
+    <h2>Oppgave 1</h2>
+    <p>Her blir det laget en variabel som heter "pi" denblir tilegnet verdien 3,14 også blir det skrevet inn pi 3.14 i console loggen.</p>
+    <script>
+      const pi = 3.14
+      console.log('1: pi', pi)
+    </script>
+    <pre></pre>
+  </div>
+
+  <div class="task">
+    <h2>Oppgave 2</h2>
+    <p>Her vil det bli skrevet to console logger. Den ene vil skrive ut "2: number 3" og den andre vil skrive ut "2: half number 1.5". Dette fungerer ved å først definere variabelen number også etterhvert dele variabelen på 2.</p>
+    <script>
+      let number = 3
+      console.log('2: number', number)
+      number = number / 2
+      console.log('2: half number', number)
+    </script>
+    <pre></pre>
+  </div>
+
+  <div class="task">
+    <h2>Oppgave 3</h2>
+    <p></p>
+    <script>
+      let tall = 3.14
+      const firstName = "Philip";
+      const lastName = "Torrissen";
+      const fullName = lastName + ", " + firstName;
+      console.log('3: full name', fullName);
+    </script>
+    <pre></pre>
+  </div>
+
+  <div class="task">
+    <h2>Oppgave 4</h2>
+    <p>Lag et inputfelt som sjekker kontinuerlig (oninput) om brukeren har skrevet det magiske ordet (du bestemmer hva dette er). Når ordet er skrevet, bruk alert() til å si ifra at brukeren vant!</p>
+    <input type="text" id="magic-word-input">
+    <script>
+      const magicWord = "eikeli";
+      const inputField = document.getElementById("magic-word-input");
+
+      inputField.addEventListener("input", function () {
+        if (inputField.value.toLowerCase() === magicWord) {
+          alert("Gratulerer, du har vunnet!");
+        }
+      });
+    </script>
+    <pre></pre>
+  </div>
+
+  <div class="task">
+    <h2>Oppgave 5</h2>
+    <p>Samme som i oppgaven over, men Input-feltet skal ha en placeholder-tekst. For å vinne trengs ikke en eksakt match, bare at teksten brukeren skriver inneholder det magiske ordet. Teksten brukeren skriver kan godt være i feil casing (upper/lower).</p>
+    <input type="text" id="magic-word-input2" placeholder="Skriv det magiske ordet">
+    <script>
+      const inputFieldincludes = document.getElementById("magic-word-input2");
+      const magicWordincludes = "eikeli";
+      inputFieldincludes.addEventListener("input", function () {
+          console.log("Ok nå er vi inne")
+        if (inputFieldincludes.value.toLowerCase().includes(magicWordincludes)) {
+          alert("Gratulerer, du har vunnet!");
+        }
+      });
+    </script>
+    <pre></pre>
+  </div>
+
+  <div class="task">
+    <h2>Oppgave 6</h2>
+    <p>Samme som i oppgaven over, men Input-feltet skal ha en placeholder-tekst. For å vinne trengs ikke en eksakt match, bare at teksten brukeren skriver inneholder det magiske ordet. Teksten brukeren skriver kan godt være i feil casing (upper/lower).</p>
+    <input type="text" id="inputField" placeholder="Skriv noe...">
+    <div>
+      <p id="text"></p>
+    </div>
+    <script>
+      const inputField = document.getElementById('inputField');
+      const outputText = document.getElementById('text');
+  
+      // Definer det magiske ordet (i dette tilfellet "magi")
+      const magicWord = "magi";
+  
+      inputField.addEventListener('input', () => {
+        const inputValue = inputField.value;
+        const reversedValue = inputValue.split('').reverse().join('');
+        outputText.textContent = reversedValue;
+  
+        // Sjekk om den speilvendte teksten inneholder det magiske ordet (uavhengig av casing)
+        if (reversedValue.toLowerCase().includes(magicWord)) {
+          outputText.style.backgroundColor = 'green';
+        } else {
+          outputText.style.backgroundColor = 'white';
+        }
+      });
+    </script>
+    <pre></pre>
+  </div>
+  
+
+
+  
+
+
+  <script>
+    const divs = document.querySelectorAll('div.task')
+    divs.forEach((div) => {
+      const sourceScript = div.querySelector('script')
+      const targetPre = div.querySelector('pre')
+      targetPre.textContent = sourceScript.textContent
+    })
+  </script>
+
+</body>
+</html>

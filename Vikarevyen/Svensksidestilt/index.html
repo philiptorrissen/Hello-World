@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svensksidestilt</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Bruker Roboto-fonten */
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .buss {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0px 0px 5px #888888;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: 400px; /* Sett en fast høyde for bildene */
+            object-fit: cover; /* Beholder bildets sideforhold og beskærer det om nødvendig */
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Media query for små skjermer (maks 600px bredde) */
+        @media (max-width: 600px) {
+            .buss {
+                padding: 5px;
+                margin: 5px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+    <!-- Legg til lenken til Roboto-fonten fra Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+</head>
+<body>
+    <h1>Oversikt over Busser</h1>
+    
+    <button onclick="sortBussList()">Sorter A-Å</button>
+
+    <div class="buss">
+        <h2>Ristern</h2>
+        <img src="buss4.jpg" alt="Ristern">
+    </div>
+
+    <div class="buss">
+        <h2>Forhuden</h2>
+        <img src="Forhuden4.JPG" alt="Forhuden">
+    </div>
+    <div class="buss">
+        <h2>Knugen</h2>
+        <img src="Knugen1.jpg" alt="Knugen">
+    </div>
+    <div class="buss">
+        <h2>Ørnen</h2>
+        <img src="buss2.jpg" alt="Ørnen">
+    </div>
+    <div class="buss">
+        <h2>Neven</h2>
+        <img src="neven2.jpeg" alt="Ørnen">
+    </div>
+    <div class="buss">
+        <h2>Wonderbajs</h2>
+        <img src="buss2.jpg" alt="Ørnen">
+    </div>
+    <div class="buss">
+        <h2>Plog1</h2>
+        <img src="Plog4.jpeg" alt="Ørnen">
+    </div>
+    
+    
+    <!-- Legg til flere busser på samme måte -->
+
+    <script>
+        function sortBussList() {
+            const busserContainer = document.querySelector('.buss');
+            const busser = Array.from(busserContainer.querySelectorAll('.buss'));
+
+            busser.sort((a, b) => {
+                const nameA = a.querySelector('h2').textContent.trim().toUpperCase();
+                const nameB = b.querySelector('h2').textContent.trim().toUpperCase();
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            busserContainer.innerHTML = '';
+            busser.forEach(buss => {
+                busserContainer.appendChild(buss);
+            });
+        }
+    </script>
+</body>
+</html>
